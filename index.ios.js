@@ -3,8 +3,7 @@
  * https://github.com/facebook/react-native
  * @flow
  */
-
- import React, { AppRegistry} from 'react-native';
- import App from './app/containers/app';
+import React, { AppRegistry } from 'react-native';
+import App from './src/containers/app';
 
 AppRegistry.registerComponent('ReactNativeReduxSample', () => App);
