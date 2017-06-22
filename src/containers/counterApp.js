@@ -31,3 +31,16 @@ export default connect(state => ({
     actions: bindActionCreators(counterActions, dispatch)
   })
 )(CounterApp);
+
+// function mapStateToProps(state) {
+//   console.log(state.counter)
+//   return {
+//     state: state.counter
+//   }
+// }
+//
+// function mapDispatchToProps(dispatch) {
+//   return bindActionCreators(counterActions, dispatch)
+// }
+//
+// export default connect(mapStateToProps, mapDispatchToProps)(CounterApp)
