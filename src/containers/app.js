@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { Provider } from 'react-redux';
-import CounterApp from './counterApp'
+import CounterApp from './CounterApp'
 import store from '../config/store'
 
 export default class App extends Component {

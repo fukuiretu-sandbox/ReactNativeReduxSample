@@ -1,5 +1,5 @@
-import React, {Component, PropTypes} from 'react';
-import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
+import React, { Component, PropTypes } from 'react';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
 const styles = StyleSheet.create({
   button: {
@@ -11,28 +11,21 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     margin: 3
   }
-});
+})
 
-export default class Counter extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    const { count, increment, decrement } = this.props;
-
-    return (
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>{count}</Text>
-        <TouchableOpacity onPress={increment} style={styles.button}>
-          <Text>up</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={decrement} style={styles.button}>
-          <Text>down</Text>
-        </TouchableOpacity>
-      </View>
-    );
-  }
+const Counter = (props) => {
+  const { count, increment, decrement } = props
+  return (
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>{count}</Text>
+      <TouchableOpacity onPress={increment} style={styles.button}>
+        <Text>up</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={decrement} style={styles.button}>
+        <Text>down</Text>
+      </TouchableOpacity>
+    </View>
+  )
 }
 
 Counter.propTypes = {
@@ -40,3 +33,5 @@ Counter.propTypes = {
   decrement: PropTypes.func.isRequired,
   count: PropTypes.number.isRequired
 }
+
+export default Counter;
